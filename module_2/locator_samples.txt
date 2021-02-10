@@ -1,5 +1,5 @@
-#name
+#firstnameid
 //input[@name='userlastname']
-.third
-//div[1]/input[@group-name='contact']
-//input[@class='form-control second']
+.input-email
+//div[1]/input[@myattribute='cup']
+//input[@class='form-control second input-address']
