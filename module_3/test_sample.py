@@ -20,12 +20,12 @@ try:
 
     # Ввести зарегистрированный в системе адрес электронной почты
     inputemail = browser.find_element_by_name("login-username")
-    inputemail.send_keys("testpochta@mail.ru")
+    inputemail.send_keys("testpochta@mail.ru")  # тестовый email
 
     # Ввести пароль в поле
 
     inputpswd = browser.find_element_by_name("login-password")
-    inputpswd.send_keys("Q!W@E#R$T%")
+    inputpswd.send_keys("Q!W@E#R$T%")  # тестовый пароль
 
     # Нажать кнопку "Войти"
 
