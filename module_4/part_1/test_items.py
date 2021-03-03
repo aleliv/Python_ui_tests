@@ -2,13 +2,16 @@ def test_add_to_cart_button_name(browser):
     # Data
     page_link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
 
-    add_to_cart_button_name = 'Добавить в корзину'
     assertion_error_text = "The add to cart button's text is wrong"
 
     add_to_cart_button_locator = ".btn-add-to-basket"
 
     # Arrange
     browser.get(page_link)
+    if browser.current_url.__contains__("ru"):
+        add_to_cart_button_name = 'Добавить в корзину'
+    elif browser.current_url.__contains__("es"):
+        add_to_cart_button_name = 'Añadir al carrito'
 
     # Act
     search_add_to_cart_button = browser.find_element_by_css_selector(add_to_cart_button_locator)
