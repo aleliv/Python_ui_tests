@@ -1,5 +1,6 @@
 import pytest
 
+from module_5.pages.basket_page import BasketPage
 from module_5.pages.product_page import ProductPage
 
 link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019"
@@ -52,5 +53,13 @@ class TestProductPage:
         page = ProductPage(browser, link_city)
         page.open()
         page.go_to_login_page()
+
+    def test_guest_cant_see_product_in_basket_opened_from_product_page(self, browser):
+        link_city = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
+        page = BasketPage(browser, link_city)
+        page.open()
+        page.go_to_basket_page()
+        page.should_no_products()
+        page.should_be_empty_msg()
 
 
