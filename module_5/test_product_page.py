@@ -14,7 +14,7 @@ class TestProductPage:
                              ["offer0", "offer1", "offer2", "offer3", "offer4", "offer5", "offer6",
                               pytest.param("offer7", marks=pytest.mark.xfail), "offer8",
                               "offer9"])
-    @pytest.mark.skip
+#    @pytest.mark.skip
     def test_guest_can_add_product_to_basket(self, browser, promo_offer):
         promo_link = f"http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo={promo_offer}"
         page = ProductPage(browser, promo_link)
