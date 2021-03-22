@@ -1,6 +1,7 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from datetime import datetime
 
 
 def pytest_addoption(parser):
@@ -29,5 +30,7 @@ def browser(request):
         raise pytest.UsageError("--browser_name should be chrome or firefox")
 #    browser.implicitly_wait(5)
     yield browser
+    now = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    browser.save_screenshot('screenshot-%s.png' % now)
     print("\nquit browser..")
     browser.quit()
