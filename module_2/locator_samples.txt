@@ -1,5 +1,0 @@
-#firstnameid
-//input[@name='userlastname']
-.input-email
-//div[1]/input[@myattribute='cup']
-//input[@class='form-control second input-address']
