@@ -108,6 +108,7 @@ class TestGuestAddToBasketFromProductPage:
         page.should_be_add_product_message()
         page.should_basket_cost_message()
 
+    @pytest.mark.five_unique_tests
     def test_product_in_basket(self, browser):
         # Arrange
         product_link = "http://selenium1py.pythonanywhere.com/ru/catalogue/hacking-exposed-wireless_208/"
@@ -117,4 +118,4 @@ class TestGuestAddToBasketFromProductPage:
         page.add_product_to_basket()
         page.go_to_basket_page()
         # Assert
-        page.should_product_be_in_the_basket
+        page.should_product_be_in_the_basket()

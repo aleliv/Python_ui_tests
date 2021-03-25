@@ -28,6 +28,8 @@ class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     BASKET_LINK = (By.CSS_SELECTOR, ".btn-group")
     USER_ICON = (By.CSS_SELECTOR, ".icon-user")
+    SEARCH_FIELD = (By.NAME, "q")
+    SEARCH_BTN = (By.CSS_SELECTOR, ".navbar-right .btn.btn-default")
 
 
 class BasketPageLocators:

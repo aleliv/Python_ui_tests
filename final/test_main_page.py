@@ -28,3 +28,4 @@ class TestMainPage:
         page.go_to_basket_page()
         page.should_no_products()
         page.should_be_empty_msg()
+

@@ -19,6 +19,7 @@ class TestUserRegistration:
         # Assert
         page.should_be_success_register_msg()
 
+    @pytest.mark.five_unique_tests
     def test_login(self, browser):
         # Arrange
         link = "http://selenium1py.pythonanywhere.com/ru/accounts/login/"
@@ -33,5 +34,3 @@ class TestUserRegistration:
         page.user_login(email=email, password=pswd)
         # Assert
         page.should_be_success_login_msg()
-
-
