@@ -1,4 +1,4 @@
-from module_5.pages.base_page import BasePage
+from final.pages.base_page import BasePage
 
 
 class MainPage(BasePage):

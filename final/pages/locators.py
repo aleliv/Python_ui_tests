@@ -8,6 +8,11 @@ class LoginPageLocators:
     PSWD_REG_FIELD = (By.CSS_SELECTOR, "#id_registration-password1")
     PSWD_REG_FIELD_REP = (By.CSS_SELECTOR, "#id_registration-password2")
     REG_BTN = (By.NAME, "registration_submit")
+    SUCCESS_MSG = (By.CSS_SELECTOR, ".alert-success")
+    LOGOUT_BTN = (By.CSS_SELECTOR, "#logout_link")
+    EMAIL_LOGIN_FIELD = (By.CSS_SELECTOR, "#id_login-username")
+    PSWD_LOGIN_FIELD = (By.CSS_SELECTOR, "#id_login-password")
+    LOGIN_BTN = (By.NAME, "login_submit")
 
 
 class ProductPageLocators:
