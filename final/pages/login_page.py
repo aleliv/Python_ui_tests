@@ -39,3 +39,16 @@ class LoginPage(BasePage):
 
     def should_be_success_login_msg(self):
         assert self.is_element_present(*LoginPageLocators.SUCCESS_MSG), "Success message is not present"
+
+    def go_to_account_page(self):
+        self.browser.find_element(*LoginPageLocators.ACCOUNT_LINK).click(), "User is not logged in"
+
+    def delete_account(self, password):
+        self.browser.find_element(*LoginPageLocators.DELETE_BTN).click()
+        self.browser.find_element(*LoginPageLocators.PSWD_DEL_FIELD).send_keys(password)
+        self.browser.find_element(*LoginPageLocators.COMFIRM_DELETE_BTN).click()
+
+    def should_be_success_del_msg(self):
+        assert self.is_element_present(*LoginPageLocators.SUCCESS_DEL_MSG), "Account is not deleted"
+
+

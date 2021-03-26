@@ -69,7 +69,17 @@ class BasePage:
         assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
                                                                      " probably unauthorised user"
 
+    def should_not_be_authorized_user(self):
+        assert self.is_not_element_present(*BasePageLocators.USER_ICON), "User icon is presented," \
+                                                                         " probably authorised user"
+
     def search_product(self, search):
         self.browser.find_element(*BasePageLocators.SEARCH_FIELD).send_keys(search)
         self.browser.find_element(*BasePageLocators.SEARCH_BTN).click()
+
+    def should_be_search_result(self):
+        assert self.is_element_present(*BasePageLocators.SEARCH_RESULT), "No search results"
+
+    def should_not_be_search_result(self):
+        assert self.is_not_element_present(*BasePageLocators.SEARCH_RESULT), "Products found"
 

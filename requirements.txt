@@ -15,6 +15,7 @@ pytest==5.1.1
 pytest-rerunfailures==7.0
 PyVirtualDisplay==0.2.4
 selenium==3.141.0
+six==1.15.0
 typing-extensions==3.7.4.3
 urllib3==1.26.3
 wcwidth==0.2.5

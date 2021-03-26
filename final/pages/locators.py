@@ -13,6 +13,11 @@ class LoginPageLocators:
     EMAIL_LOGIN_FIELD = (By.CSS_SELECTOR, "#id_login-username")
     PSWD_LOGIN_FIELD = (By.CSS_SELECTOR, "#id_login-password")
     LOGIN_BTN = (By.NAME, "login_submit")
+    ACCOUNT_LINK = (By.CSS_SELECTOR, ".navbar-right > :nth-child(1) a")
+    DELETE_BTN = (By.CSS_SELECTOR, "#delete_profile")
+    PSWD_DEL_FIELD = (By.CSS_SELECTOR, "#id_password")
+    COMFIRM_DELETE_BTN = (By.CSS_SELECTOR, ".btn-danger")
+    SUCCESS_DEL_MSG = (By.CSS_SELECTOR, ".alertinner")
 
 
 class ProductPageLocators:
@@ -30,6 +35,7 @@ class BasePageLocators:
     USER_ICON = (By.CSS_SELECTOR, ".icon-user")
     SEARCH_FIELD = (By.NAME, "q")
     SEARCH_BTN = (By.CSS_SELECTOR, ".navbar-right .btn.btn-default")
+    SEARCH_RESULT = (By.CSS_SELECTOR, ".form-horizontal strong")
 
 
 class BasketPageLocators:
